@@ -39,8 +39,17 @@ body a {
   color: white;
 }
 
-.white {
-  background-color: rgb(255, 253, 253);
+.article-card-container span,
+aside a {
+  background-color: rgba(233, 231, 231, 0.673);
+  border-radius: 50px;
+  padding-block: 0.4rem;
+  padding-inline: 0.6rem;
+}
+
+.border {
+  margin-block: 4rem;
+  border: solid 1px rgba(209, 206, 206, 0.597);
 }
 
 /* ----------------
@@ -199,10 +208,11 @@ h4 {
 
 .flex {
   display: flex;
+  gap: 2rem;
 }
 
-.margin {
-  margin-top: 5rem;
+article {
+  flex-grow: 1;
 }
 
 article h4 {
@@ -220,7 +230,6 @@ article h4 {
 
 .img-container-article {
   width: 12rem;
-  height: 9rem;
   overflow: hidden;
   flex-grow: 0;
   flex-shrink: 0;
@@ -255,3 +264,59 @@ article h4 {
 /* -----------------------
         ASIDE
 ------------------------- */
+
+.aside-footer-container {
+  flex-shrink: 0;
+  position: sticky;
+  top: 15rem;
+}
+aside,
+footer {
+  width: 25rem;
+}
+aside h3 {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.link-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+aside a {
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  color: rgb(49, 49, 49);
+}
+
+aside a:last-of-type {
+  background-color: transparent;
+  color: #1a8717;
+  padding: 0;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+aside {
+  border-bottom: 1px solid rgba(205, 204, 204, 0.468);
+}
+
+/* -----------------------
+        FOOTER
+------------------------- */
+
+footer {
+  margin-top: 1.5rem;
+}
+
+footer div.link-container {
+  gap: 1rem;
+}
+
+footer a {
+  color: rgb(117, 117, 117);
+  font-size: 0.9rem;
+}
