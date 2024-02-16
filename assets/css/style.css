@@ -1,0 +1,257 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+body a {
+  text-decoration: none;
+  color: black;
+}
+.main {
+  width: 70%;
+  margin-inline: auto;
+}
+
+/* -----------------
+    CLASS FOR COLOR
+--------------------- */
+
+.bg-color {
+  background-color: #ffc017;
+}
+
+.btn {
+  border-radius: 50px;
+  padding: 0.7rem;
+  padding-inline: 1rem;
+}
+
+.black {
+  background-color: rgb(8, 8, 8);
+}
+
+.btn.black a {
+  color: white;
+}
+
+.white {
+  background-color: rgb(255, 253, 253);
+}
+
+/* ----------------
+      HEADER
+-------------------*/
+header {
+  position: relative;
+}
+
+header a {
+  color: black;
+}
+
+header ul {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  list-style-type: none;
+  font-size: 0.9rem;
+}
+
+header > div:nth-of-type(1) {
+  width: 100%;
+  display: flex;
+  padding-block: 1.2rem;
+  padding-inline: 18%;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  position: fixed;
+  border-bottom: 1px solid black;
+  z-index: 99;
+}
+
+header > div:nth-of-type(2) {
+  display: flex;
+  justify-content: space-between;
+  top: 4.7rem;
+  position: relative;
+  border-bottom: 1px solid black;
+}
+
+header > div:nth-of-type(2) > div:first-of-type {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  padding: 0;
+  margin-block: 2rem;
+  padding-left: 18%;
+}
+
+header > div:nth-of-type(2) > div h1 {
+  font-size: 6.8rem;
+  font-family: "Spectral", serif;
+}
+header > div:nth-of-type(2) > div p:first-of-type {
+  margin-block: 2rem;
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+}
+
+header > div:nth-of-type(2) > div p:last-of-type {
+  font-size: 1.2rem;
+  padding-inline: 3rem;
+  padding-block: 0.6rem;
+}
+header > svg {
+  width: 50% !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* -----------------------
+        SECTION
+------------------------- */
+.main {
+  position: relative;
+}
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+h4 {
+  margin-top: 8rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.main h4 i {
+  margin-right: 1rem;
+}
+
+.section-card-container {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  width: 30%;
+}
+
+.section-card-container p {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.114);
+}
+
+.section-card-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-container {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.section-body-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.h5-card-img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.h5-card-img h5 {
+  font-size: 0.8rem;
+}
+.section-body-card-container h3 {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.section-body-card-container p {
+  font-size: 0.8rem;
+  color: black;
+  font-weight: 400;
+}
+
+/* -----------------------
+        ARTICLE
+------------------------- */
+
+.flex {
+  display: flex;
+}
+
+.margin {
+  margin-top: 5rem;
+}
+
+article h4 {
+  margin: 0;
+  font-weight: 400;
+}
+
+.article-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.img-container-article {
+  width: 12rem;
+  height: 9rem;
+  overflow: hidden;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.img-container-article img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.article-card-container h3 {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+.article-card-container p:first-of-type {
+  color: rgb(115, 112, 112);
+  margin-top: 0.4rem;
+}
+.article-card-container p:last-of-type {
+  color: rgb(115, 112, 112);
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.article-card-container span {
+  background-color: rgba(233, 231, 231, 0.673);
+  border-radius: 50px;
+  padding-block: 0.4rem;
+  padding-inline: 0.6rem;
+}
+
+/* -----------------------
+        ASIDE
+------------------------- */
