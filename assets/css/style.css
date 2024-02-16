@@ -55,9 +55,6 @@ aside a {
 /* ----------------
       HEADER
 -------------------*/
-header {
-  position: relative;
-}
 
 header a {
   color: black;
@@ -71,7 +68,7 @@ header ul {
   font-size: 0.9rem;
 }
 
-header > div:nth-of-type(1) {
+.fix-header {
   width: 100%;
   display: flex;
   padding-block: 1.2rem;
@@ -84,15 +81,16 @@ header > div:nth-of-type(1) {
   z-index: 99;
 }
 
-header > div:nth-of-type(2) {
+.down-part-header {
   display: flex;
   justify-content: space-between;
   top: 4.7rem;
   position: relative;
   border-bottom: 1px solid black;
+  height: 50vh;
 }
 
-header > div:nth-of-type(2) > div:first-of-type {
+.down-part-header div {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -101,28 +99,31 @@ header > div:nth-of-type(2) > div:first-of-type {
   padding: 0;
   margin-block: 2rem;
   padding-left: 18%;
+  z-index: 2;
 }
 
-header > div:nth-of-type(2) > div h1 {
+.down-part-header div h1 {
   font-size: 6.8rem;
   font-family: "Spectral", serif;
 }
-header > div:nth-of-type(2) > div p:first-of-type {
+.down-part-header div p:first-of-type {
   margin-block: 2rem;
   font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
 }
 
-header > div:nth-of-type(2) > div p:last-of-type {
+.down-part-header div p:last-of-type {
   font-size: 1.2rem;
   padding-inline: 3rem;
   padding-block: 0.6rem;
 }
-header > svg {
-  width: 50% !important;
+svg {
+  width: 35% !important;
+  margin: 0;
   position: absolute;
-  top: 0;
+  top: -160px;
   right: 0;
+  z-index: 1;
 }
 
 /* -----------------------
@@ -209,6 +210,7 @@ h4 {
 .flex {
   display: flex;
   gap: 2rem;
+  position: relative;
 }
 
 article {
@@ -222,7 +224,7 @@ article h4 {
 
 .article-card-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
   margin-bottom: 2rem;
@@ -265,15 +267,20 @@ article h4 {
         ASIDE
 ------------------------- */
 
-.aside-footer-container {
-  flex-shrink: 0;
-  position: sticky;
-  top: 15rem;
+#aside-footer-container {
 }
-aside,
-footer {
+
+aside {
+  position: sticky;
+  top: 9rem;
   width: 25rem;
 }
+footer {
+  position: sticky;
+  top: 26rem;
+  width: 25rem;
+}
+
 aside h3 {
   font-weight: bold;
   font-size: 1rem;
