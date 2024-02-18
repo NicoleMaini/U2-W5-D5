@@ -26,7 +26,7 @@ body a {
 }
 .bg-color-scroll {
   background-color: #ffffff;
-  transition: bg-color 1s linear;
+  transition: background-color 0.5s;
 }
 
 .btn {
@@ -59,6 +59,15 @@ aside a {
   border: solid 1px rgba(209, 206, 206, 0.597);
 }
 
+/* @keyframes fade-in {
+  0% {
+    background-color: #ffc017;
+  }
+  100% {
+    background-color: #ffffff;
+  }
+} */
+
 /* ----------------
       HEADER
 -------------------*/
@@ -89,7 +98,7 @@ header ul {
   top: 0;
   border-bottom: 1px solid black;
   z-index: 99;
-  transition: bg-color-scroll 1s 0.8s linear;
+  transition: background-color 0.5s;
 }
 
 .down-part-header {
@@ -234,7 +243,7 @@ h4 {
 
 .flex {
   display: flex;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 article {
