@@ -59,14 +59,17 @@ aside a {
   border: solid 1px rgba(209, 206, 206, 0.597);
 }
 
-/* @keyframes fade-in {
+@keyframes fade-in {
   0% {
-    background-color: #ffc017;
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
   }
   100% {
-    background-color: #ffffff;
+    opacity: 1;
   }
-} */
+}
 
 /* ----------------
       HEADER
@@ -145,6 +148,15 @@ header ul {
   right: 0;
   z-index: 1;
   height: 100%;
+}
+
+.svg-animate {
+  opacity: 0;
+  transition: 0.5s;
+}
+.svg-animate-return {
+  opacity: 1;
+  transition: 0.5s 0.5s;
 }
 
 /* -----------------------
