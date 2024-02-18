@@ -63,11 +63,8 @@ aside a {
   0% {
     opacity: 1;
   }
-  50% {
-    opacity: 0;
-  }
   100% {
-    opacity: 1;
+    opacity: 0;
   }
 }
 
@@ -156,7 +153,7 @@ header ul {
 }
 .svg-animate-return {
   opacity: 1;
-  transition: 0.5s 0.5s;
+  transition: 0.5s;
 }
 
 /* -----------------------
@@ -174,6 +171,8 @@ h4 {
   margin-top: 8rem;
   margin-bottom: 1rem;
   font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .img-i-container {
@@ -185,6 +184,14 @@ h4 {
 .img-i {
   margin-left: 0.5rem;
   width: 1.1rem !important;
+}
+
+.treding {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2rem !important;
+  margin-left: 0;
+  margin-right: 0.5rem;
 }
 
 .main h4 i {
@@ -231,6 +238,7 @@ h4 {
   flex-direction: row;
   align-items: center;
   gap: 0.6rem;
+  cursor: pointer;
 }
 
 .h5-card-img h5 {
@@ -287,6 +295,7 @@ article h4 {
   justify-content: space-between;
   flex-grow: 1;
   margin-left: 0.4rem;
+  cursor: pointer;
 }
 
 .img-container-article {
@@ -298,21 +307,25 @@ article h4 {
 .img-container-article img {
   width: 100%;
   object-fit: contain;
+  cursor: pointer;
 }
 
 .article-card-container h3 {
   font-weight: bold;
   font-size: 1.1rem;
   margin-top: 1rem;
+  cursor: pointer;
 }
 .article-card-container p:first-of-type {
   color: rgb(115, 112, 112);
   margin-top: 0.4rem;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 .article-card-container p:last-of-type {
   color: rgb(115, 112, 112);
   font-size: 0.9rem;
+  line-height: 1.4rem;
 }
 
 .article-card-container span {
@@ -383,4 +396,62 @@ footer div.link-container {
 footer {
   color: rgb(117, 117, 117);
   font-size: 0.9rem;
+}
+
+/* ------------------------
+      MEDIA QUERIES 
+------------------------*/
+
+@media screen and (max-width: 1200px) {
+  .down-part-header div h1 {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 998px) {
+  .main {
+    max-width: 90%;
+  }
+
+  .fix-header {
+    padding-inline: 5%;
+  }
+
+  .down-part-header-title {
+    padding-inline: 5%;
+  }
+
+  .down-part-header div h1 {
+    font-size: 5rem;
+  }
+
+  /* section */
+
+  .flex {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .section-card-container {
+    width: 48%;
+  }
+  #aside-footer-container {
+    position: inherit;
+    max-width: 100%;
+    order: -1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  ul li:nth-of-type(1),
+  ul li:nth-of-type(2),
+  ul li:nth-of-type(3) {
+    display: none;
+  }
+
+  .svg-container {
+    display: none;
+  }
+  .section-card-container {
+    width: 100%;
+  }
 }

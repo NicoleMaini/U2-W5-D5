@@ -24,7 +24,7 @@ console.log(svgM);
 const svgMReturn = [];
 // console.log(svgMReturn);
 
-const svgAnimateReturn = () => {
+function svgAnimateReturn() {
   const blockLoop = setInterval(() => {
     const randNum = Math.floor(Math.random() * svgMReturn.length);
     svgMReturn[randNum].classList.remove("svg-animate");
@@ -32,24 +32,23 @@ const svgAnimateReturn = () => {
     svgMReturn.pop(svgMReturn[randNum]);
     if (svgMReturn.length === 0) {
       clearInterval(blockLoop);
+      svgAnimateStart();
     }
   }, 100);
   blockLoop;
-};
+}
 
-const svgAnimate = setInterval(() => {
-  if (svgMReturn.length === 150) {
-    clearInterval(svgAnimate);
-    svgAnimateReturn(svgMReturn);
-  } else {
-    const randNum = Math.floor(Math.random() * svgM.length);
-    svgM[randNum].classList.add("svg-animate");
-    svgMReturn.push(svgM[randNum]);
-  }
-}, 100);
+function svgAnimateStart() {
+  const svgAnimate = setInterval(() => {
+    if (svgMReturn.length === 150) {
+      clearInterval(svgAnimate);
+      svgAnimateReturn();
+    } else {
+      const randNum = Math.floor(Math.random() * svgM.length);
+      svgM[randNum].classList.add("svg-animate");
+      svgMReturn.push(svgM[randNum]);
+    }
+  }, 10);
+}
 
-setInterval(() => {
-  if (svgMReturn.length === 0) {
-    svgAnimate;
-  }
-}, 1);
+svgAnimateStart();
